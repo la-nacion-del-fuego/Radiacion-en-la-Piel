@@ -8,7 +8,7 @@
    
    > python3 ./rte.py
 
-## Introdution
+## Introduction
 In this modeling and simulation project we will work with radiation and the theory of radiative transport, this research was developed mainly by the physicist-mathematician Subrahmanyan Chandrasekhar of Indian origin. We with that theory will simulate a ray of radiation that travels and makes contact with the skin specifically the heel of a human foot, the energy of said ray will be lost to be absorbed but also that same energy will be distributed by dispersion.
 
 ## Abstract
