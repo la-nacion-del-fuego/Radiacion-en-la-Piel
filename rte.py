@@ -23,7 +23,6 @@ import math
 import matplotlib.pyplot as plt
 
 c=3e10 #cm/s
-kB= 1.38e-16 #[ergK-1]
 
 #opacity [cm-1]
 def k(L):
@@ -34,27 +33,44 @@ def tau(dx,x,wl,L):
     return (dx/2.0)*(k(L) + k(L))
 
 N = 100
+Ns = [100,40,1000,200]
+Names = ["Talon del pie","Parpado","Abdomen Personas Obesas","Abdomen Personas Delgadas"]
+colorsGraphs = ["Green","Blue","Purple","Red"]
 I0 = 250000 #[erg/cm2 sec cm ster]
 nu = 1e8 #Hz
 dx = 0.1   #[mm]
 wl = c/nu #Amstrongs
 lmd = 500
 
-layers = range(1,int(N+1))
-X = []
-Y = []
-I = I0
-for i in layers:
-    x = float(i)*dx
-    I = I*math.exp(-tau(dx,x,wl,lmd))
-    X.append(x)
-    Y.append(I)
+savesX = []
+savesY = []
+savesNames = []
 
-fig,ax = plt.subplots()
-fig.suptitle("Absorcion de luz solar en el talon del pie")
-ax.plot(X,Y)
-ax.set_xlabel("Densidad de la piel mm")
-ax.set_ylabel("Intensidad Especifica")
+for n,j in zip(Names,Ns):
+    X = []
+    Y = []
+    I = I0
+    for i in range(1,j+1):
+        x = float(i)*dx
+        I = I*math.exp(-tau(dx,x,wl,lmd))
+        X.append(x)
+        Y.append(I)
+    savesX.append(X)
+    savesY.append(Y)
+    savesNames.append(n)
 
-plt.savefig("Ejemplo.jpg", bbox_inches='tight')
+fig,ax = plt.subplots(2,2)
+fig.suptitle("Absorcion de la luz en diferentes partes del cuerpo")
+fig.set_size_inches(13,10,forward=True)
+iterator = 0
+for y in range(2):
+    for x in range(2):
+        ax[y][x].plot(savesX[x+y],savesY[x+y],colorsGraphs[iterator])
+        ax[y][x].set_title(Names[iterator])
+        iterator += 1
+
+for ax in ax.flat:
+    ax.set(xlabel='Densidad de la piel en mm', ylabel='Intensidad Especifica')
+
+plt.savefig("Ejemplo.jpg")
 plt.show()
