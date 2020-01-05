@@ -2,6 +2,12 @@
 
 ## How to run the program
 
+   > git clone https://github.com/la-nacion-del-fuego/Radiacion-en-la-Piel.git
+   
+   > cd Radiacion-en-la-Piel/  
+   
+   > python3 ./rte.py
+
 ## Introdution
 
 ## Methodology
