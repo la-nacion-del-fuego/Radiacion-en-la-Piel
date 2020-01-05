@@ -25,8 +25,17 @@ To better perform our simulation we will keep in mind that we will work with hum
 having thus more complete the idea on which we will work it is necessary to establish our objective which is:
 - Visualize the absorption of a radiation beam in human skin, calculating its coefficient and how it decreases as the radiation beam enters the human skin.
 ![images](https://user-images.githubusercontent.com/38228291/71786960-ee5ef800-3011-11ea-92ce-2d450fbc3427.png)
-## Methodology
+## Methodology 
+- We will begin our model knowing that the absorption of the radiation beam on the surface of the epidermis will be very low and that the skin is not a radiation emitter therefore as it travels deeper into it, the absorption increases.
 
+- The necessary variables for our model are:
+>>- k: = Skin opacity, k (𝜆) cm-1
+>>- dx: = It will be calculated every 0.1mm
+>>- τ: = Optical depth, 𝜏 (dx, 𝜆)
+>>- 𝜆: = It is the wavelength, 500 name this document
+>>- N: = It is the number of iterations
+>>- I0: = Is the initial intensity
+>>- Iv: = Is the intensity at point v
 ## Outcome:
 ## Bibliography
 - [Vitamin D obtained by sunlight](http://www.fundaciondn.org/reto/la-vitamina-d-la-de-la-luz-del-sol/?fbclid=IwAR2u47-OlbKQqV20ZUsU_-hjoF41DZp2SRDyKN9KwALsftvezPtMaA5GKqM)
@@ -44,3 +53,4 @@ having thus more complete the idea on which we will work it is necessary to esta
 - [The Appearance of Human Skin](http://www1.cs.columbia.edu/CAVE/publications/pdfs/Igarashi_CUTR05.pdf)
 - [Quantitative and Qualitative Measurement Of Skin Color](http://www.cedlabs.com/wp-content/uploads/2014/08/Color-de-la-piel.pdf)
 - [image of sun and skin](https://www.google.com/search?q=luz+solar+en+la+piel+dibujo&tbm=isch&ved=2ahUKEwjTrPuxv-3mAhVuma0KHQDCBj0Q2-cCegQIABAA&oq=luz+solar+en+la+piel+dibujo&gs_l=img.3...9327.10678..10978...0.0..0.128.804.0j7......0....1..gws-wiz-img.fy7NnsWIh9c&ei=XmESXtOFKe6ytgWAhJvoAw&bih=608&biw=1366&rlz=1C1CHBF_esMX810MX810&hl=es-419#imgrc=oO0zdwyT7k5wRM)
+- [Image of the fire nation](https://www.google.com/search?q=icono+nacion+del+fuego&rlz=1C1CHBF_esMX810MX810&sxsrf=ACYBGNQBf63ha8ZuphTKoJyBet7DIcMDYQ:1578263747956&tbm=isch&source=iu&ictx=1&fir=z_gOm1JpHyiNIM%253A%252CiJVVPGZI0opoaM%252C_&vet=1&usg=AI4_-kTvyOBniqJ5OpJ5eMbeiXlamUUOdw&sa=X&ved=2ahUKEwik6bvQwu3mAhWEna0KHSqwCHUQ9QEwAHoECAoQBg#imgrc=z_gOm1JpHyiNIM:)
