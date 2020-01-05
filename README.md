@@ -9,6 +9,19 @@
    > python3 ./rte.py
 
 ## Introdution
+In this modeling and simulation project we will work with radiation and the theory of radiative transport, this research was developed mainly by the physicist-mathematician Subrahmanyan Chandrasekhar of Indian origin. We with that theory will simulate a ray of radiation that travels and makes contact with the skin specifically the heel of a human foot, the energy of said ray will be lost to be absorbed but also that same energy will be distributed by dispersion.
+
+## Abstract
+In this project we focus especially on the radiative transfer equation, which tells us that a traveling radiation beam will lose energy by absorption, will gain energy by emission and redistribute energy by dispersion.
+
+Our idea used in this project is to use this equation to display the absorption coefficient whose skin exposed to a beam of sunlight.
+
+Our idea used in this project is to use this equation to visualize the absorption coefficient that the skin has exposed to a ray of solar radiation.
+
+To better perform our simulation we will keep in mind that we will work with human skin which is made up of multiple layers, from the Epidermis which contains the stratum corneum, lucid stratum, granular stratum, spiny stratum and the basal stratum. Said layer measures at least 0.1mm deep. Then the Dermis would come and finally the hypodermis. All these layers alter the coefficient of absorption of the skin, apart from that we also have melanin which helps to avoid being damaged by UV rays.
+
+having thus more complete the idea on which we will work it is necessary to establish our objective which is:
+- Visualize the absorption of a radiation beam in human skin, calculating its coefficient and how it decreases as the radiation beam enters the human skin.
 
 ## Methodology
 
