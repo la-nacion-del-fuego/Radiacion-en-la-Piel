@@ -1,6 +1,8 @@
+![EmblemaFuegoControl](https://user-images.githubusercontent.com/38228291/67335050-6ba2c280-f523-11e9-93c5-928435fdd118.png)
 # Radiative transfer
 
 ## How to run the program
+- Before running the program make sure you have the necessary requirements.
 
    > git clone https://github.com/la-nacion-del-fuego/Radiacion-en-la-Piel.git
    
@@ -22,7 +24,7 @@ To better perform our simulation we will keep in mind that we will work with hum
 
 having thus more complete the idea on which we will work it is necessary to establish our objective which is:
 - Visualize the absorption of a radiation beam in human skin, calculating its coefficient and how it decreases as the radiation beam enters the human skin.
-
+![images](https://user-images.githubusercontent.com/38228291/71786960-ee5ef800-3011-11ea-92ce-2d450fbc3427.png)
 ## Methodology
 
 ## Outcome:
@@ -41,3 +43,4 @@ having thus more complete the idea on which we will work it is necessary to esta
 - [Dermal exposure to chemicals in the workplace: just how important is skin absorption?](https://oem.bmj.com/content/61/4/376.full)
 - [The Appearance of Human Skin](http://www1.cs.columbia.edu/CAVE/publications/pdfs/Igarashi_CUTR05.pdf)
 - [Quantitative and Qualitative Measurement Of Skin Color](http://www.cedlabs.com/wp-content/uploads/2014/08/Color-de-la-piel.pdf)
+- [image of sun and skin](https://www.google.com/search?q=luz+solar+en+la+piel+dibujo&tbm=isch&ved=2ahUKEwjTrPuxv-3mAhVuma0KHQDCBj0Q2-cCegQIABAA&oq=luz+solar+en+la+piel+dibujo&gs_l=img.3...9327.10678..10978...0.0..0.128.804.0j7......0....1..gws-wiz-img.fy7NnsWIh9c&ei=XmESXtOFKe6ytgWAhJvoAw&bih=608&biw=1366&rlz=1C1CHBF_esMX810MX810&hl=es-419#imgrc=oO0zdwyT7k5wRM)
