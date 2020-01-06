@@ -2,7 +2,7 @@
 # Radiative transfer
 
 ## How to run the program
-- Before running the program make sure you have the necessary requirements.
+- Before running the program make sure you have the necessary requirements, clone the repository and run the program in your terminal.
 
    > git clone https://github.com/la-nacion-del-fuego/Radiacion-en-la-Piel.git
    
@@ -11,12 +11,10 @@
    > python3 ./rte.py
 
 ## Introduction
-In this modeling and simulation project we will work with radiation and the theory of radiative transport, this research was developed mainly by the physicist-mathematician Subrahmanyan Chandrasekhar of Indian origin. We with that theory will simulate a ray of radiation that travels and makes contact with the skin specifically the heel of a human foot, the energy of said ray will be lost to be absorbed but also that same energy will be distributed by dispersion.
+In this modeling and simulation project we will work with radiation and the theory of radiative transport, this research was developed mainly by the physicist-mathematician Subrahmanyan Chandrasekhar of Indian origin. We with that theory will simulate a ray of radiation that travels and makes contact with the skin of various parts of the human body , the energy of said ray will be lost to be absorbed but also that same energy will be distributed by dispersion.
 
 ## Abstract
 In this project we focus especially on the radiative transfer equation, which tells us that a traveling radiation beam will lose energy by absorption, will gain energy by emission and redistribute energy by dispersion.
-
-Our idea used in this project is to use this equation to display the absorption coefficient whose skin exposed to a beam of sunlight.
 
 Our idea used in this project is to use this equation to visualize the absorption coefficient that the skin has exposed to a ray of solar radiation.
 
@@ -36,7 +34,25 @@ having thus more complete the idea on which we will work it is necessary to esta
 >>- N: = It is the number of iterations
 >>- I0: = Is the initial intensity
 >>- Iv: = Is the intensity at point v
+- already working on the code, the first thing was to establish the software license and import the libraries that we will use.
+- Now we will implement the opacity function **"def k"** that reveals how much transparency human skin has.
+- The next thing will be to add the **"tau"** function to calculate the visual depth, this to know how far the light reaches the skin.
+- Then we will add labels to improve the visualization of the results and to be able to choose from our viable options which part of the body to simulate.
+- The next thing we implemented was a cycle which is responsible for modeling the radiative transfer for all layers of the skin.
+- The following will be to print all the graphics of the iteration of different parts of the body in a single image.
+- finally we will implement another cycle that will take X and Y to make the graphics and give them colors, title, label on the X and Y axis and then save the graphics as an example of all the parts of the body where we are going to simulate, among them are; heel of the foot, eyelid, abdomen of obese and thin people
 ## Outcome:
+The graph shows the absorption when a ray of sunlight that travels in 90 ° and without any deviation or object that crosses it meets the heel skin. This shows its specific intensity in its total making contact with the skin and descending until traveling by 10 millimeters where from 9 already stops absorbing when its passage through the foot bone is blocked.
+
+![Ejemplo](https://user-images.githubusercontent.com/38228291/71790090-ea8d9e80-302e-11ea-83a6-f4d80699d3dd.jpg)
+
+Following the example above but now in other parts of the body we have the following results:
+
+![unnamed (3)](https://user-images.githubusercontent.com/38228291/71790378-6805de80-3030-11ea-995a-b08f2048f369.jpg)
+![unnamed](https://user-images.githubusercontent.com/38228291/71790396-81a72600-3030-11ea-90f8-299a59199fa2.jpg)
+![unnamed (1)](https://user-images.githubusercontent.com/38228291/71790404-8d92e800-3030-11ea-9083-4da5eb9babf1.jpg)
+![unnamed (2)](https://user-images.githubusercontent.com/38228291/71790409-9a174080-3030-11ea-9967-85a2615ec8c5.jpg)
+
 ## Bibliography
 - [Vitamin D obtained by sunlight](http://www.fundaciondn.org/reto/la-vitamina-d-la-de-la-luz-del-sol/?fbclid=IwAR2u47-OlbKQqV20ZUsU_-hjoF41DZp2SRDyKN9KwALsftvezPtMaA5GKqM)
 - [Vitamin D information](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897598/?fbclid=IwAR2aO93VCq1d-P38d-78dmIxr7gtQLNWCd_FlABwEJEpYLZssLmnR_uovio)
