@@ -6,15 +6,14 @@ import matplotlib.pyplot as plt
 c=3e10 #cm/s
 
 #opacity [cm-1]
-def k(L):
-    return 0.244 + (85.3 * math.e**(-(L-154)/66.2))
+def k(L,skinInit):
+    if 20 >= skinInit >= 10:
+        return 0.244 + (85.3 * math.e**(-(L-154)/66.2))
+    else:
+        return 0
 
-#optical depth (adimensional)
-def tau(dx,x,wl,L):
-    return (dx/2.0)*(k(L-dx) + k(L))
-
-N = 100
-Ns = [100,40,1000,200,5]
+#N = 100
+Ns = [10,4,100,20,5]
 Names = ["Talon del pie","Parpado","Abdomen Personas Obesas","Abdomen Personas Delgadas","Escroto"]
 colorsGraphs = ["Green","Blue","Purple","Red","Brown"]
 I0 = 250000 #[erg/cm2 sec cm ster]
@@ -23,19 +22,18 @@ dx = 0.1   #[mm]
 wl = c/nu #Amstrongs
 lmd = 500
 
+
 savesX = []
 savesY = []
 savesNames = []
 
-for n,j in zip(Names,Ns):
+for n,i in zip(Names,Ns):
     X = []
     Y = []
-    I = I0
-    for i in range(1,j+1):
-        x = float(i)*dx
-        I = I*math.exp(-tau(dx,x,wl,lmd))
+    for x in range(i+5):
+        opacity = k(lmd,x)
         X.append(x)
-        Y.append(I)
+        Y.append(opacity)
     savesX.append(X)
     savesY.append(Y)
     savesNames.append(n)
