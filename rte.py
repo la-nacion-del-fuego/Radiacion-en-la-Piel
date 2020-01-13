@@ -6,16 +6,16 @@ import matplotlib.pyplot as plt
 c=3e10 #cm/s
 
 #opacity [cm-1]
-def k(L,skinInit):
-    if 20 >= skinInit >= 10:
+def k(L,initLayer,finalLayer,x):
+    if finalLayer >= x >= initLayer:
         return 0.244 + (85.3 * math.e**(-(L-154)/66.2))
     else:
         return 0
 
 #N = 100
-Ns = [10,4,100,20,5]
-Names = ["Talon del pie","Parpado","Abdomen Personas Obesas","Abdomen Personas Delgadas","Escroto"]
-colorsGraphs = ["Green","Blue","Purple","Red","Brown"]
+Ns = [10,4,100,20,5,3]
+Names = ["Talon del pie","Parpado","Abdomen Personas Obesas","Abdomen Personas Delgadas","Escroto","Gluteos"]
+colorsGraphs = ["Green","Blue","Purple","Red","Brown","Gold"]
 I0 = 250000 #[erg/cm2 sec cm ster]
 nu = 1e8 #Hz
 dx = 0.1   #[mm]
@@ -30,8 +30,8 @@ savesNames = []
 for n,i in zip(Names,Ns):
     X = []
     Y = []
-    for x in range(i+5):
-        opacity = k(lmd,x)
+    for x in range(i+int(i*.5)):
+        opacity = k(lmd,i*.5,i,x)
         X.append(x)
         Y.append(opacity)
     savesX.append(X)
